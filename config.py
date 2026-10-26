@@ -1,9 +1,4 @@
-"""
-config.py
----------
-Central place for every path, constant and logging setting used by ChurnGuard.
-Change a value here and the whole project follows.
-"""
+
 import logging
 from pathlib import Path
 
