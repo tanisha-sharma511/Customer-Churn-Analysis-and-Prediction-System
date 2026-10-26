@@ -1,11 +1,4 @@
-"""
-app.py  -  ChurnGuard dashboard (Streamlit)
 
-    streamlit run app.py
-
-Pages:  Dashboard | Customer Explorer | Predict a Customer | Model Performance
-Run  python train.py  once BEFORE starting the dashboard (it creates the model and data files).
-"""
 import json
 
 import pandas as pd
