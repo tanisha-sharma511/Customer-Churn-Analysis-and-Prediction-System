@@ -100,22 +100,27 @@ These recommendations should be refined based on the actual findings of the proj
 
 ## 📁 Project Structure
 
-```text
-Telecom-Customer-Churn-Analysis/
-│
-├── data/
-│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
-│
-├── notebooks/
-│   └── telecom_churn_analysis.ipynb
-│
-├── images/
-│   └── dashboard_screenshot.png.png
-│   └── dashboard_screenshot1.png.png
-│
-├── README.md
+churnguard/
+├── app.py               Streamlit dashboard           
+├── train.py             Runs the whole pipeline with 1 command  
+├── config.py            All paths, constants, logging
+├── data_loader.py       Data layer: CSV -> SQLite -> SQL queries
+├── preprocessing.py     Cleaning, feature engineering, preprocessor
+├── modeling.py          Train/compare/tune models, explain, risk-score
+├── visualize.py         All charts (saved as PNG)
+├── insights.py          Risk bands + retention recommendations
+├── predictor.py         Predict ONE customer 
+├── reporting.py         Collects every number for your report (report_tokens.json)
+├── tests/               automated tests
+├── tools/               make_synthetic_data.py (fake data, only for testing)
+├── data/                <- put the Kaggle CSV here
+├── models/              created by train.py  (churn_model.joblib)
+├── outputs/             created by train.py  (scored CSV, metrics, SQLite DB, tokens)
+├── reports/figures/     created by train.py  (all charts for the report / screenshots)
+├── logs/                created by train.py  (app.log)
+├── requirements.txt
+└── README.md
 ```
-
 
 ## 🚀 How to Run the Project
 
