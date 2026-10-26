@@ -1,9 +1,4 @@
-"""
-data_loader.py
---------------
-Data layer: read the CSV, validate its columns, load it into SQLite and run the
-SQL aggregation queries used for profiling.
-"""
+
 import sqlite3
 from pathlib import Path
 from typing import Dict
